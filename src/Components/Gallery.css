@@ -1,0 +1,65 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 images per row, ensuring no extra space */
+    gap: 5px; /* Gap between images */
+    margin-bottom: 20px; /* Space between gallery and footer */
+  }
+  
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 200px; /* Set the desired height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images maintain aspect ratio and cover the container */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .gallery-image:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  
+  .modal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    max-width: 90%;
+    max-height: 80%;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
